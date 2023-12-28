@@ -1,3 +1,4 @@
+var app = require('../../app');
 var trendingErrorStatus, trendingErrorText, imageurl, searchTerm;
 
 $(document).ready(getTrending);
@@ -81,6 +82,10 @@ function sliderValues() {
 }
 
 function setImage() {
+  var myScript = document.getElementById('myscript');
+  var myScriptSrc = myScript.getAttribute('src');
+  alert(myScriptSrc);
+
   var imageSourceDomain = process.env.imageSourceDomain;
 
   link = document.getElementById('image-link').value;
