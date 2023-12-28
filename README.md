@@ -36,11 +36,16 @@ The variables apiKey, limit, rating, language, and sort will be created automaca
   * **rating** - Limit results to those rated (g, pg, pg-13 or r)
   * **language** - Default country for regional content; format is 2-letter ISO 639-1 country code
   * **sort** - Sort order of the results returned (recent | relevant)
-  * **imageSourceDomain** - After create your Heroku App, go to settings and add this *Config Var*, then set the URL of your app on this var, example, `https://sfmc-cb-ccb-giphy-a493f4a4fc46.herokuapp.com`
+
 * Create an Installed Package and add a component type of Custom Content Block. Use the Heroku app URL as the Endpoint URL when configuring this component.
 
 <a href="https://www.heroku.com/deploy/?template=https://github.com/acates1982/cbSdkGiphy">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
+### Assets to Update before deploy
 
+* **public/javascripts/main.js**  
+  * Search for **deployedAppDomain** and update the value for your app URL
+* **app.json**  
+  * Change the app domain URL for **logo** var

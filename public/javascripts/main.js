@@ -81,12 +81,8 @@ function sliderValues() {
 }
 
 function setImage() {
-  var myScript = document.getElementById('myscript');
-  var myScriptSrc = myScript.getAttribute('src');
-  alert(myScriptSrc);
-
-  var imageSourceDomain = process.env.imageSourceDomain;
-
+  var deployedAppDomain = "https://sfmc-cb-ccb-giphy-a493f4a4fc46.herokuapp.com";
+  
   link = document.getElementById('image-link').value;
   width = document.getElementById('slider-image-width').value;
   height = document.getElementById('slider-image-height').value;
@@ -94,9 +90,9 @@ function setImage() {
   scale = document.querySelector('input[name="scale"]:checked').value;
 
   if (scale === "yes") {
-    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img style="width: 100%" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="' + imageSourceDomain + '/images/Poweredby_100px-White_VertLogo.png"></div>');
+    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img style="width: 100%" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="' + deployedAppDomain + '/images/Poweredby_100px-White_VertLogo.png"></div>');
   } else {
-    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img height="' + height + '" width="' + width + '" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="' + imageSourceDomain + '/images/Poweredby_100px-White_VertLogo.png"></div>');
+    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img height="' + height + '" width="' + width + '" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="' + deployedAppDomain + '/images/Poweredby_100px-White_VertLogo.png"></div>');
   }
 
   sdk.setData({
