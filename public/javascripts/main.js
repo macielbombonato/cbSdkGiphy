@@ -1,4 +1,3 @@
-var app = require('../../app');
 var trendingErrorStatus, trendingErrorText, imageurl, searchTerm;
 
 $(document).ready(getTrending);
