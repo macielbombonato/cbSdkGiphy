@@ -88,9 +88,9 @@ function setImage() {
   scale = document.querySelector('input[name="scale"]:checked').value;
 
   if (scale === "yes") {
-    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img style="width: 100%" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="https://experts-cb-sdk-giphy.herokuapp.com/images/Poweredby_100px-White_VertLogo.png"></div>');
+    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img style="width: 100%" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="https://sfmc-cb-ccb-sample-370387f83928.herokuapp.com/images/Poweredby_100px-White_VertLogo.png"></div>');
   } else {
-    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img height="' + height + '" width="' + width + '" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="https://experts-cb-sdk-giphy.herokuapp.com/images/Poweredby_100px-White_VertLogo.png"></div>');
+    sdk.setContent('<div style="text-align: ' + alignment + ';"> <a href="' + link + '"><img height="' + height + '" width="' + width + '" src="' + imageurl + '" /></a></div><div style="text-align: center"><img src="https://sfmc-cb-ccb-sample-370387f83928.herokuapp.com/images/Poweredby_100px-White_VertLogo.png"></div>');
   }
 
   sdk.setData({
